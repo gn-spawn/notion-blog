@@ -17,12 +17,12 @@ export const Share = ({ text, url }: Props) => {
     <ul className="flex justify-center list-none">
       <li className="mr-8">
         <TwitterShareButton url={url} title={text}>
-          <TwitterIcon size={32} round={true} />
+          <TwitterIcon size={32} />
         </TwitterShareButton>
       </li>
       <li>
         <FacebookShareButton url={url}>
-          <FacebookIcon size={32} round={true} />
+          <FacebookIcon size={32} />
         </FacebookShareButton>
       </li>
     </ul>
