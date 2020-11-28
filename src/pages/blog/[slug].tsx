@@ -4,6 +4,7 @@ import { useRouter } from 'next/router'
 import Header from '../../components/header'
 import Heading from '../../components/heading'
 import components from '../../components/dynamic'
+import { Share } from '../../components/share'
 import ReactJSXParser from '@zeit/react-jsx-parser'
 import blogStyles from '../../styles/blog.module.css'
 import { textBlock } from '../../lib/notion/renderers'
@@ -416,6 +417,7 @@ const RenderPost = ({ post, redirect, preview }) => {
           }
           return toRender
         })}
+        {process.browser && <Share text={post.Page} url={location.href} />}
       </div>
     </>
   )
